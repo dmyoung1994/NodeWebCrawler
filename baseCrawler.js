@@ -12,7 +12,10 @@ function BaseCrawler (crawlName="") {
 
     this.baseUrl = "";
     this.seedUrls = [];
-    this.crawlUrls = [];
+    this.crawlPaths = [];
+    this.dataPath = "";
+
+    this.crawledUrls = [];
     this.dataUrls = [];
 
 
@@ -39,7 +42,14 @@ BaseCrawler.prototype.setBaseUrl = function(url) {
 }
 
 BaseCrawler.prototype.addSeedUrl = function(url) {
-    this.seedUrls.add(url);
+    this.seedUrls.push(url);
 }
+
+BaseCrawler.prototype.addCrawlPath = functiom(path) {
+    this.crawlPaths.add(path);
+}
+
+BaseCrawler.prototype.setDataPath = function(path) {
+   this.dataPath.add(path); 
 
 module.export = BaseCrawler;
